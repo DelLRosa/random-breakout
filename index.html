@@ -15,12 +15,21 @@
 
     <label for="namesInput">Enter Names (separated by commas):</label>
     <input type="text" id="namesInput" name="namesInput" placeholder="Enter names separated by commas">
+    <br>
 
-    <label for="numInput">Enter Number of Students Per Group:</label>
-    <input type="text" id="numInput" name="numInput" placeholder="Enter number of students per group">
+    <label for="numInput">Enter Desired Number of Groups:</label>
+    <input type="text" id="numInput" name="numInput" value = "2">
 
     <button type="submit">Submit</button>
   </form>
+
+  <button id = "clear">Clear</button>
+  <div>
+    <h3>your groups</h3>
+    <div id = "groupDisplay">
+      <p>waiting for input... </p>
+    </div>
+  </div>
 
 </body>
 </html>
