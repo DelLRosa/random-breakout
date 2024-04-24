@@ -5,27 +5,36 @@ window.addEventListener("load", function(){
 
     form.addEventListener("submit", function(event){
         event.preventDefault();
-        const namesInput = document.getElementById('namesInput').value; 
+        const namesInput = document.getElementById('namesInput').value.trim(); 
         const numRooms = parseInt(document.getElementById("numInput").value);
 
-        let namesArray = namesInput.split(",");
-        namesArray = namesArray.map(function(name){
-            return name.trim();
-        });
+        const namesInputValidation = validateInput(namesInput);
+        const numRoomsValidation = validateInput(numRooms);
 
-        let groups = randomize(namesArray,numRooms);
-        let htmlContent = '';
-        groups.forEach(function(group, index){
-            htmlContent += `<div class="group">
-                                <h3>Group ${index + 1}</h3>
-                                <ul>`;
-            group.forEach(function(student){
-                htmlContent += `<li>${student}</li>`;
+        if (namesInputValidation === "empty" || numRoomsValidation === "empty"){
+            window.alert("All fields are required!");
+        } else if (numRoomsValidation === "not a number" || numRooms<=0){
+            window.alert("Number of rooms must be a valid number!");
+        } else {
+            let namesArray = namesInput.split(",");
+            namesArray = namesArray.map(function(name){
+                return name.trim();
             });
-            htmlContent += `</ul>
-                           </div>`;
-        });
-        groupDisplay.innerHTML = htmlContent;
+
+            let groups = randomize(namesArray, numRooms);
+            let htmlContent = '';
+            groups.forEach(function(group, index){
+                htmlContent += `<div class="group">
+                                    <h3>Group ${index + 1}</h3>
+                                    <ul>`;
+                group.forEach(function(student){
+                    htmlContent += `<li>${student}</li>`;
+                });
+                htmlContent += `</ul>
+                               </div>`;
+            });
+            groupDisplay.innerHTML = htmlContent;
+        }
     });
 
     clearButton.addEventListener("click", function(){
@@ -36,6 +45,16 @@ window.addEventListener("load", function(){
         }
     });
 
+    function validateInput(input){
+        let numberInput = Number(input);
+        if (input===""){
+            return "empty"
+        } else if (isNaN(numberInput) ){
+            return "not a number";
+        } else if (!isNaN(numberInput)){
+            return "is a number"
+        }
+    }
 
     function randomize(nameArray,numRooms){
         let studentsPerRoom = Math.ceil(nameArray.length / numRooms);
