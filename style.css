@@ -1,0 +1,142 @@
+
+/* Global styles */
+body {
+  font-family: 'Outfit', sans-serif; /* Use the Google Font */
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+.center-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #333;
+}
+
+.question {
+  margin-bottom: 15px;
+  align-content: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+textarea,
+input {
+  width: 95%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#clear {
+  margin-top: 20px;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+#groupDisplay {
+  margin-top: 10px;
+}
+.group {
+    display: inline-block;
+    width: calc(25% - 20px); /* Adjust as needed based on your layout */
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    vertical-align: top; /* Align cards at the top */
+  }
+  
+  .group h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .group ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .group li {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #666;
+  }
+  
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .center-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}
+
+
+/* body {
+    background: radial-gradient(circle at 50.3% 44.5%, rgb(116, 147, 179) 0%, rgb(62, 83, 104) 100.2%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    width: 100vw;
+    padding: 0 10vw;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: left;
+    background-color: #354a5f;
+}
+
+#namesForm {
+    background-color: rgb(161, 194, 228);
+
+} */
