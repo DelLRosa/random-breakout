@@ -45,7 +45,7 @@ window.addEventListener("load", function(){
             htmlContent += `<div class="group">
                                 <h3>Group ${index + 1}</h3>
                                 <ul>`;
-            let driverIndex = Math.floor(Math.random() * group.length); // Randomly select driver
+            let driverIndex = Math.floor(Math.random() * group.length); 
             group.forEach(function(student, studentIndex){
                 htmlContent += `<li>${student}`;
                 if (designateDriverCheckbox.checked && studentIndex === driverIndex) {

@@ -4,7 +4,7 @@ body {
   font-family: 'Outfit', sans-serif; /* Use the Google Font */
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
+  background: radial-gradient(circle at 50.3% 44.5%, rgb(116, 147, 179) 0%, rgb(62, 83, 104) 100.2%);
 }
 
 .center-container {
@@ -102,6 +102,16 @@ h3 {
     margin-bottom: 5px;
     font-size: 16px;
     color: #666;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 50px; 
+    background-color: #f0f0f0; 
+    color: #666;
+    font-size: x-small;
   }
   
 
